@@ -22,14 +22,9 @@
 		D518A7821C51AEAD009FFC1C /* 07.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A7591C51AEAD009FFC1C /* 07.png */; };
 		D518A7831C51AEAD009FFC1C /* 08.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A75A1C51AEAD009FFC1C /* 08.png */; };
 		D518A7841C51AEAD009FFC1C /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A75B1C51AEAD009FFC1C /* back.png */; };
-		D518A7851C51AEAD009FFC1C /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D518A75C1C51AEAD009FFC1C /* bg.jpg */; };
-		D518A7861C51AEAD009FFC1C /* bird 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D518A75D1C51AEAD009FFC1C /* bird 1.jpg */; };
-		D518A7871C51AEAD009FFC1C /* bird 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D518A75E1C51AEAD009FFC1C /* bird 2.jpg */; };
-		D518A7881C51AEAD009FFC1C /* bird 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D518A75F1C51AEAD009FFC1C /* bird 3.jpg */; };
 		D518A7891C51AEAD009FFC1C /* bird.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A7601C51AEAD009FFC1C /* bird.png */; };
 		D518A78A1C51AEAD009FFC1C /* gameover.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A7611C51AEAD009FFC1C /* gameover.png */; };
 		D518A78B1C51AEAD009FFC1C /* gameover2.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A7621C51AEAD009FFC1C /* gameover2.png */; };
-		D518A78C1C51AEAD009FFC1C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A7631C51AEAD009FFC1C /* icon.png */; };
 		D518A78D1C51AEAD009FFC1C /* main.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A7641C51AEAD009FFC1C /* main.png */; };
 		D518A78E1C51AEAD009FFC1C /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A7651C51AEAD009FFC1C /* menu.png */; };
 		D518A78F1C51AEAD009FFC1C /* pipe.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A7661C51AEAD009FFC1C /* pipe.png */; };
@@ -53,6 +48,10 @@
 		D518A7A11C51AEAD009FFC1C /* Sound06.wav in Resources */ = {isa = PBXBuildFile; fileRef = D518A7791C51AEAD009FFC1C /* Sound06.wav */; };
 		D518A7A21C51AEAD009FFC1C /* Sound16.wav in Resources */ = {isa = PBXBuildFile; fileRef = D518A77A1C51AEAD009FFC1C /* Sound16.wav */; };
 		D518A7A31C51AEAD009FFC1C /* Sound18.wav in Resources */ = {isa = PBXBuildFile; fileRef = D518A77B1C51AEAD009FFC1C /* Sound18.wav */; };
+		D55BAFAA1C53BD830048FFE0 /* bird1.png in Resources */ = {isa = PBXBuildFile; fileRef = D55BAFA71C53BD830048FFE0 /* bird1.png */; };
+		D55BAFAB1C53BD830048FFE0 /* bird2.png in Resources */ = {isa = PBXBuildFile; fileRef = D55BAFA81C53BD830048FFE0 /* bird2.png */; };
+		D55BAFAC1C53BD830048FFE0 /* bird3.png in Resources */ = {isa = PBXBuildFile; fileRef = D55BAFA91C53BD830048FFE0 /* bird3.png */; };
+		D55BAFAE1C53C4340048FFE0 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D55BAFAD1C53C4340048FFE0 /* bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,14 +86,9 @@
 		D518A7591C51AEAD009FFC1C /* 07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 07.png; sourceTree = "<group>"; };
 		D518A75A1C51AEAD009FFC1C /* 08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 08.png; sourceTree = "<group>"; };
 		D518A75B1C51AEAD009FFC1C /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		D518A75C1C51AEAD009FFC1C /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
-		D518A75D1C51AEAD009FFC1C /* bird 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bird 1.jpg"; sourceTree = "<group>"; };
-		D518A75E1C51AEAD009FFC1C /* bird 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bird 2.jpg"; sourceTree = "<group>"; };
-		D518A75F1C51AEAD009FFC1C /* bird 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bird 3.jpg"; sourceTree = "<group>"; };
 		D518A7601C51AEAD009FFC1C /* bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird.png; sourceTree = "<group>"; };
 		D518A7611C51AEAD009FFC1C /* gameover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameover.png; sourceTree = "<group>"; };
 		D518A7621C51AEAD009FFC1C /* gameover2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameover2.png; sourceTree = "<group>"; };
-		D518A7631C51AEAD009FFC1C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		D518A7641C51AEAD009FFC1C /* main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main.png; sourceTree = "<group>"; };
 		D518A7651C51AEAD009FFC1C /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		D518A7661C51AEAD009FFC1C /* pipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe.png; sourceTree = "<group>"; };
@@ -118,6 +112,10 @@
 		D518A7791C51AEAD009FFC1C /* Sound06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound06.wav; sourceTree = "<group>"; };
 		D518A77A1C51AEAD009FFC1C /* Sound16.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound16.wav; sourceTree = "<group>"; };
 		D518A77B1C51AEAD009FFC1C /* Sound18.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sound18.wav; sourceTree = "<group>"; };
+		D55BAFA71C53BD830048FFE0 /* bird1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird1.png; sourceTree = "<group>"; };
+		D55BAFA81C53BD830048FFE0 /* bird2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird2.png; sourceTree = "<group>"; };
+		D55BAFA91C53BD830048FFE0 /* bird3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird3.png; sourceTree = "<group>"; };
+		D55BAFAD1C53C4340048FFE0 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,14 +216,13 @@
 				D518A7591C51AEAD009FFC1C /* 07.png */,
 				D518A75A1C51AEAD009FFC1C /* 08.png */,
 				D518A75B1C51AEAD009FFC1C /* back.png */,
-				D518A75C1C51AEAD009FFC1C /* bg.jpg */,
-				D518A75D1C51AEAD009FFC1C /* bird 1.jpg */,
-				D518A75E1C51AEAD009FFC1C /* bird 2.jpg */,
-				D518A75F1C51AEAD009FFC1C /* bird 3.jpg */,
+				D55BAFAD1C53C4340048FFE0 /* bg.png */,
 				D518A7601C51AEAD009FFC1C /* bird.png */,
+				D55BAFA71C53BD830048FFE0 /* bird1.png */,
+				D55BAFA81C53BD830048FFE0 /* bird2.png */,
+				D55BAFA91C53BD830048FFE0 /* bird3.png */,
 				D518A7611C51AEAD009FFC1C /* gameover.png */,
 				D518A7621C51AEAD009FFC1C /* gameover2.png */,
-				D518A7631C51AEAD009FFC1C /* icon.png */,
 				D518A7641C51AEAD009FFC1C /* main.png */,
 				D518A7651C51AEAD009FFC1C /* menu.png */,
 				D518A7661C51AEAD009FFC1C /* pipe.png */,
@@ -342,18 +339,16 @@
 			files = (
 				D518A7901C51AEAD009FFC1C /* pipe1.png in Resources */,
 				D518A7941C51AEAD009FFC1C /* ready.png in Resources */,
-				D518A7871C51AEAD009FFC1C /* bird 2.jpg in Resources */,
 				D518A7A01C51AEAD009FFC1C /* sfx_wing.ogg in Resources */,
-				D518A7861C51AEAD009FFC1C /* bird 1.jpg in Resources */,
 				D518A78B1C51AEAD009FFC1C /* gameover2.png in Resources */,
 				D518A77E1C51AEAD009FFC1C /* 03.png in Resources */,
 				D518A7931C51AEAD009FFC1C /* rate.png in Resources */,
-				D518A7881C51AEAD009FFC1C /* bird 3.jpg in Resources */,
 				D518A79C1C51AEAD009FFC1C /* sfx_die.ogg in Resources */,
 				D518A7801C51AEAD009FFC1C /* 05.png in Resources */,
 				D518A77C1C51AEAD009FFC1C /* 01.png in Resources */,
 				D518A7821C51AEAD009FFC1C /* 07.png in Resources */,
 				D518A7A31C51AEAD009FFC1C /* Sound18.wav in Resources */,
+				D55BAFAC1C53BD830048FFE0 /* bird3.png in Resources */,
 				D518A7981C51AEAD009FFC1C /* tap.png in Resources */,
 				D518A73C1C51A71D009FFC1C /* LaunchScreen.xib in Resources */,
 				D518A7961C51AEAD009FFC1C /* score.png in Resources */,
@@ -363,20 +358,21 @@
 				D518A77F1C51AEAD009FFC1C /* 04.png in Resources */,
 				D518A78E1C51AEAD009FFC1C /* menu.png in Resources */,
 				D518A7841C51AEAD009FFC1C /* back.png in Resources */,
-				D518A78C1C51AEAD009FFC1C /* icon.png in Resources */,
 				D518A7991C51AEAD009FFC1C /* pipe.mp3 in Resources */,
 				D518A7A21C51AEAD009FFC1C /* Sound16.wav in Resources */,
 				D518A7391C51A71D009FFC1C /* Images.xcassets in Resources */,
+				D55BAFAB1C53BD830048FFE0 /* bird2.png in Resources */,
 				D518A79D1C51AEAD009FFC1C /* sfx_hit.ogg in Resources */,
 				D518A7891C51AEAD009FFC1C /* bird.png in Resources */,
 				D518A78A1C51AEAD009FFC1C /* gameover.png in Resources */,
+				D55BAFAA1C53BD830048FFE0 /* bird1.png in Resources */,
 				D518A7971C51AEAD009FFC1C /* start.png in Resources */,
 				D518A78F1C51AEAD009FFC1C /* pipe.png in Resources */,
 				D518A78D1C51AEAD009FFC1C /* main.png in Resources */,
+				D55BAFAE1C53C4340048FFE0 /* bg.png in Resources */,
 				D518A7911C51AEAD009FFC1C /* pipe2.png in Resources */,
 				D518A7951C51AEAD009FFC1C /* ready2.png in Resources */,
 				D518A77D1C51AEAD009FFC1C /* 02.png in Resources */,
-				D518A7851C51AEAD009FFC1C /* bg.jpg in Resources */,
 				D518A79B1C51AEAD009FFC1C /* punch3.mp3 in Resources */,
 				D518A79F1C51AEAD009FFC1C /* sfx_swooshing.ogg in Resources */,
 				D518A79A1C51AEAD009FFC1C /* punch.wav in Resources */,
@@ -588,6 +584,7 @@
 				D518A74D1C51A71D009FFC1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D518A74E1C51A71D009FFC1C /* Build configuration list for PBXNativeTarget "flappyBirdTests" */ = {
 			isa = XCConfigurationList;
@@ -596,6 +593,7 @@
 				D518A7501C51A71D009FFC1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
