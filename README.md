@@ -4,6 +4,10 @@ flappyBird Game
 # Screenshots
 <img alt="one" src="https://raw.github.com/charsdavy/flappyBird/master/screenshots/fp1.png" width="180">
 &nbsp;&nbsp;
+<img alt="one" src="https://raw.github.com/charsdavy/flappyBird/master/screenshots/fp2.png" width="180">
+&nbsp;&nbsp;
+<img alt="one" src="https://raw.github.com/charsdavy/flappyBird/master/screenshots/fp3.png" width="180">
+&nbsp;&nbsp;
 
 # Blog
 my blog is [here](http://my.oschina.net/chars/blog). 
