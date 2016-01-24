@@ -1,9 +1,9 @@
 # flappyBird
 flappyBird Game</br>
-游戏功能包括：</br>
- * 开始游戏</br>
- * 游戏音效</br>
- * 重新开始</br>
+游戏功能包括：
+ * 开始游戏
+ * 游戏音效
+ * 重新开始
 
 # Screenshots
 <img alt="one" src="https://raw.github.com/charsdavy/flappyBird/master/screenshots/fp1.png" width="180">
