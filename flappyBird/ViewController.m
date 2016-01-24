@@ -7,20 +7,8 @@
 //
 
 #import "ViewController.h"
-
-#define kRankButtonH    60
-#define kRankButtonW    100
-#define kRateButtonH    56
-#define kRateButtonW    70
-#define kStartButtonH   60
-#define kStartButtonW   100
-#define kMainTitleW     200
-#define kMainTitleH     50
-#define kScoreViewH     120
-#define kScoreViewW     200
-
-#define kScreenWidth [UIScreen mainScreen].bounds.size.width
-#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#import "GameViewController.h"
+#import "Common.h"
 
 @interface ViewController ()
 
@@ -78,9 +66,8 @@
     //birds动画
     NSMutableArray *birds = [[NSMutableArray alloc]init];
     UIImageView *birdViews = [[UIImageView alloc]initWithFrame:CGRectMake(140, 135, 40, 32)];
-    NSArray *array = @[@"bird1", @"bird2", @"bird3"];
-    for (NSInteger i = 0; i < array.count; i++) {
-        UIImage *bird = [UIImage imageNamed:array[i]];
+    for (NSInteger i = 1; i <= 3; i++) {
+        UIImage *bird = [UIImage imageNamed:[NSString stringWithFormat:@"bird%zi", i]];
         [birds addObject:bird];
     }
     birdViews.animationImages = birds;
@@ -122,6 +109,8 @@
 
 #pragma mark 点击开始
 -(void)onStartButtonClick{
+    GameViewController *gameController = [[GameViewController alloc] init];
+    [self presentViewController:gameController animated:YES completion:nil];
     NSLog(@"start");
 }
 
@@ -129,6 +118,11 @@
 -(void)onRankButtonClick{
     NSLog(@"rank");
 
+}
+
+#pragma mark 隐藏状态栏
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
