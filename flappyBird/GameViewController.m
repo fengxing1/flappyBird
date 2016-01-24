@@ -11,6 +11,7 @@
 #import "RateViewController.h"
 #import "Common.h"
 #import "SoundTool.h"
+#import "DataTool.h"
 
 @interface GameViewController ()<UIActionSheetDelegate>
 {
@@ -183,9 +184,22 @@
     [self.view addSubview:gameOverView];
 }
 
+#pragma mark 更新分数记录
+-(void)updateScore {
+    if (columnNumber > [DataTool integerForKey:kBestScoreKey]) {
+        [DataTool setInteger:columnNumber forKey:kBestScoreKey];
+    }
+    [DataTool setInteger:columnNumber forKey:kCurrentScoreKey];
+}
+
 -(void)onStop {
+    //更新分数
+    [self updateScore];
+    //弹出gameover提示
     [self pullGameOverTip];
+    //停止定时器
     [timer setFireDate:[NSDate distantFuture]];
+    //弹出选项框
     UIActionSheet *action = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"重新开始" destructiveButtonTitle:@"难度" otherButtonTitles:@"主菜单",nil];
     [action showInView:self.view];
 }

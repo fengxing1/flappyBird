@@ -24,8 +24,7 @@
 
 #pragma mark - 私有方法
 #pragma mark 加载音效
--(SystemSoundID)loadSoundIdWithBundleName:(NSBundle*)bundle name:(NSString *)name
-{
+-(SystemSoundID)loadSoundIdWithBundleName:(NSBundle*)bundle name:(NSString *)name {
     SystemSoundID soundId;
     
     NSString *path = [bundle pathForResource:name ofType:@"mp3" ];
@@ -38,8 +37,7 @@
 }
 
 #pragma mark 加载声音文件到数据字典
--(NSDictionary *)loadSoundsWithBundle:(NSBundle *)bundle
-{
+-(NSDictionary *)loadSoundsWithBundle:(NSBundle *)bundle {
     NSMutableDictionary *dictM = [NSMutableDictionary dictionary];
     
     //数组中存放所有声音的文件名
@@ -57,8 +55,7 @@
 }
 
 #pragma mark - 实例化方法
--(id)init
-{
+-(id)init {
     self = [super init];
     
     if (self) {
@@ -79,8 +76,7 @@
 }
 
 #pragma mark 使用文件名播放音效
--(void)playSoundByFileName:(NSString *)fileName
-{
+-(void)playSoundByFileName:(NSString *)fileName {
     SystemSoundID soundId = [self.soundDict[fileName] unsignedIntValue];
     
     //播放音效

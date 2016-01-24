@@ -48,4 +48,9 @@
 /**屏幕高度*/
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
+/**最佳成绩*/
+#define kBestScoreKey @"bestScore"
+/**本局成绩*/
+#define kCurrentScoreKey @"currentScore"
+
 #endif

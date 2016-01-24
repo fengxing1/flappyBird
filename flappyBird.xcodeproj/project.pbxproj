@@ -12,7 +12,6 @@
 		D518A7391C51A71D009FFC1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D518A7381C51A71D009FFC1C /* Images.xcassets */; };
 		D518A73C1C51A71D009FFC1C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D518A73A1C51A71D009FFC1C /* LaunchScreen.xib */; };
 		D518A7481C51A71D009FFC1C /* flappyBirdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D518A7471C51A71D009FFC1C /* flappyBirdTests.m */; };
-		D518A77C1C51AEAD009FFC1C /* light.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A7531C51AEAD009FFC1C /* light.png */; };
 		D518A77D1C51AEAD009FFC1C /* night.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A7541C51AEAD009FFC1C /* night.png */; };
 		D518A77E1C51AEAD009FFC1C /* road.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A7551C51AEAD009FFC1C /* road.png */; };
 		D518A7811C51AEAD009FFC1C /* 06.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A7581C51AEAD009FFC1C /* 06.png */; };
@@ -28,6 +27,7 @@
 		D518A7961C51AEAD009FFC1C /* score.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A76D1C51AEAD009FFC1C /* score.png */; };
 		D518A7971C51AEAD009FFC1C /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A76E1C51AEAD009FFC1C /* start.png */; };
 		D518A7981C51AEAD009FFC1C /* tap.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A76F1C51AEAD009FFC1C /* tap.png */; };
+		D52CAFA81C54EDBB00E1128F /* DataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D52CAFA71C54EDBB00E1128F /* DataTool.m */; };
 		D53B384A1C54A65800829D40 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B38491C54A65800829D40 /* GameViewController.m */; };
 		D53B384D1C54A97000829D40 /* RateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B384C1C54A97000829D40 /* RateViewController.m */; };
 		D53B38531C54C8B900829D40 /* sounds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D53B38521C54C8B900829D40 /* sounds.bundle */; };
@@ -60,7 +60,6 @@
 		D518A7411C51A71D009FFC1C /* flappyBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flappyBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D518A7461C51A71D009FFC1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D518A7471C51A71D009FFC1C /* flappyBirdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = flappyBirdTests.m; sourceTree = "<group>"; };
-		D518A7531C51AEAD009FFC1C /* light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light.png; sourceTree = "<group>"; };
 		D518A7541C51AEAD009FFC1C /* night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = night.png; sourceTree = "<group>"; };
 		D518A7551C51AEAD009FFC1C /* road.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = road.png; sourceTree = "<group>"; };
 		D518A7581C51AEAD009FFC1C /* 06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 06.png; sourceTree = "<group>"; };
@@ -76,6 +75,8 @@
 		D518A76D1C51AEAD009FFC1C /* score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score.png; sourceTree = "<group>"; };
 		D518A76E1C51AEAD009FFC1C /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		D518A76F1C51AEAD009FFC1C /* tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap.png; sourceTree = "<group>"; };
+		D52CAFA61C54EDBB00E1128F /* DataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTool.h; sourceTree = "<group>"; };
+		D52CAFA71C54EDBB00E1128F /* DataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTool.m; sourceTree = "<group>"; };
 		D53B38481C54A65800829D40 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		D53B38491C54A65800829D40 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		D53B384B1C54A97000829D40 /* RateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateViewController.h; sourceTree = "<group>"; };
@@ -185,7 +186,6 @@
 		D518A7521C51AEAD009FFC1C /* images */ = {
 			isa = PBXGroup;
 			children = (
-				D518A7531C51AEAD009FFC1C /* light.png */,
 				D518A7541C51AEAD009FFC1C /* night.png */,
 				D518A7551C51AEAD009FFC1C /* road.png */,
 				D518A7581C51AEAD009FFC1C /* 06.png */,
@@ -214,6 +214,8 @@
 			children = (
 				D53B38551C54CA5F00829D40 /* SoundTool.h */,
 				D53B38561C54CA5F00829D40 /* SoundTool.m */,
+				D52CAFA61C54EDBB00E1128F /* DataTool.h */,
+				D52CAFA71C54EDBB00E1128F /* DataTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -313,7 +315,6 @@
 				D518A78B1C51AEAD009FFC1C /* gameover.png in Resources */,
 				D518A77E1C51AEAD009FFC1C /* road.png in Resources */,
 				D518A7931C51AEAD009FFC1C /* rate.png in Resources */,
-				D518A77C1C51AEAD009FFC1C /* light.png in Resources */,
 				D518A7821C51AEAD009FFC1C /* 07.png in Resources */,
 				D55BAFAC1C53BD830048FFE0 /* bird3.png in Resources */,
 				D518A7981C51AEAD009FFC1C /* tap.png in Resources */,
@@ -352,6 +353,7 @@
 				D53B384A1C54A65800829D40 /* GameViewController.m in Sources */,
 				D518A7341C51A71D009FFC1C /* ViewController.m in Sources */,
 				D53B384D1C54A97000829D40 /* RateViewController.m in Sources */,
+				D52CAFA81C54EDBB00E1128F /* DataTool.m in Sources */,
 				D518A72E1C51A71D009FFC1C /* main.m in Sources */,
 				D53B385C1C54CA8900829D40 /* AppDelegate.m in Sources */,
 			);

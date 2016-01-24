@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "GameViewController.h"
 #import "Common.h"
+#import "DataTool.h"
 
 @interface ViewController ()
 
@@ -46,7 +47,7 @@
     CGFloat bestW = 40;
     CGFloat bestH = 20;
     UILabel *bestScore = [[UILabel alloc] initWithFrame:CGRectMake(bestX, bestY, bestW, bestH)];
-    bestScore.text = @"0";
+    bestScore.text = [NSString stringWithFormat:@"%zi", [DataTool integerForKey:kBestScoreKey]];
     bestScore.font = [UIFont systemFontOfSize:16];
     bestScore.textAlignment = NSTextAlignmentRight;
     bestScore.textColor = [UIColor orangeColor];
@@ -57,7 +58,8 @@
     CGFloat scoreW = 40;
     CGFloat scoreH = 20;
     UILabel *score = [[UILabel alloc] initWithFrame:CGRectMake(scoreX, scoreY, scoreW, scoreH)];
-    score.text = @"0";
+    score.text = [NSString stringWithFormat:@"%zi", [DataTool integerForKey:kCurrentScoreKey]];
+    
     score.font = [UIFont systemFontOfSize:16];
     score.textAlignment = NSTextAlignmentRight;
     score.textColor = [UIColor orangeColor];
@@ -111,7 +113,6 @@
 -(void)onStartButtonClick{
     GameViewController *gameController = [[GameViewController alloc] init];
     [self presentViewController:gameController animated:YES completion:nil];
-    NSLog(@"start");
 }
 
 #pragma mark 点击排行榜
