@@ -78,7 +78,8 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(onTap)];
     [tapView addGestureRecognizer:tap];
     [self.view addSubview:tapView];
-
+    
+    //物理重力系数
     number = 0;
     
     //计时器
@@ -186,10 +187,26 @@
 
 #pragma mark 更新分数记录
 -(void)updateScore {
+    //更新最佳成绩
     if (columnNumber > [DataTool integerForKey:kBestScoreKey]) {
         [DataTool setInteger:columnNumber forKey:kBestScoreKey];
     }
+    //更新本局分数
     [DataTool setInteger:columnNumber forKey:kCurrentScoreKey];
+    //更新排行榜
+    NSMutableArray *ranks = (NSMutableArray *)[DataTool objectForKey:kRankKey];
+    NSInteger count = ranks.count;
+    for (NSInteger i = 0; i < count; i++) {
+        NSString *scoreStr = ranks[i];
+        NSInteger score = [scoreStr integerValue];
+        if (score < columnNumber) {
+            scoreStr = [NSString stringWithFormat:@"%zi", columnNumber];
+            [ranks insertObject:scoreStr atIndex:i];
+            [ranks removeLastObject];
+            break;
+        }
+    }
+    [DataTool setObject:ranks forKey:kRankKey];
 }
 
 -(void)onStop {
@@ -200,19 +217,15 @@
     //停止定时器
     [timer setFireDate:[NSDate distantFuture]];
     //弹出选项框
-    UIActionSheet *action = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"重新开始" destructiveButtonTitle:@"难度" otherButtonTitles:@"主菜单",nil];
+    UIActionSheet *action = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"重新开始" destructiveButtonTitle:nil otherButtonTitles:@"主菜单",nil];
     [action showInView:self.view];
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 2) {
+    if (buttonIndex == 1) {
         //重新开始
         ViewController *viewController = [[ViewController alloc]init];
         [self presentViewController:viewController animated:YES completion:nil];
-    }else if (buttonIndex == 0){
-        //难度
-        RateViewController *rateController = [[RateViewController alloc]init];
-        [self presentViewController:rateController animated:YES completion:nil];
     } else {
         //主菜单
         ViewController *viewController = [[ViewController alloc]init];

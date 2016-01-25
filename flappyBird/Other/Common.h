@@ -52,5 +52,9 @@
 #define kBestScoreKey @"bestScore"
 /**本局成绩*/
 #define kCurrentScoreKey @"currentScore"
+/**游戏难度等级*/
+#define kRateKey @"rate"
+/**游戏排行榜*/
+#define kRankKey @"rank"
 
 #endif

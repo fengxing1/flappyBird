@@ -19,4 +19,17 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
++ (NSString *)stringForKey:(NSString *)defaultName {
+    return [[NSUserDefaults standardUserDefaults] stringForKey:defaultName];
+}
+
++ (void)setObject:(id)value forKey:(NSString *)defaultName {
+    [[NSUserDefaults standardUserDefaults] setObject:value forKey:defaultName];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
++ (instancetype)objectForKey:(NSString *)defaultName {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:defaultName];
+}
+
 @end

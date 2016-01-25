@@ -4,6 +4,7 @@ flappyBird Game</br>
  * 开始游戏
  * 游戏音效
  * 重新开始
+ * 排行榜
 
 # Screenshots
 <img alt="one" src="https://raw.github.com/charsdavy/flappyBird/master/screenshots/fp1.png" width="180">
@@ -11,6 +12,10 @@ flappyBird Game</br>
 <img alt="one" src="https://raw.github.com/charsdavy/flappyBird/master/screenshots/fp2.png" width="180">
 &nbsp;&nbsp;
 <img alt="one" src="https://raw.github.com/charsdavy/flappyBird/master/screenshots/fp3.png" width="180">
+&nbsp;&nbsp;
+<img alt="one" src="https://raw.github.com/charsdavy/flappyBird/master/screenshots/fp4.png" width="180">
+&nbsp;&nbsp;
+<img alt="one" src="https://raw.github.com/charsdavy/flappyBird/master/screenshots/fp5.png" width="180">
 &nbsp;&nbsp;
 
 # Blog

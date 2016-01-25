@@ -28,6 +28,9 @@
 		D518A7971C51AEAD009FFC1C /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A76E1C51AEAD009FFC1C /* start.png */; };
 		D518A7981C51AEAD009FFC1C /* tap.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A76F1C51AEAD009FFC1C /* tap.png */; };
 		D52CAFA81C54EDBB00E1128F /* DataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D52CAFA71C54EDBB00E1128F /* DataTool.m */; };
+		D52CAFAE1C550C9800E1128F /* light.png in Resources */ = {isa = PBXBuildFile; fileRef = D52CAFAD1C550C9800E1128F /* light.png */; };
+		D52CAFB11C550F7C00E1128F /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52CAFB01C550F7C00E1128F /* RankViewController.m */; };
+		D52CAFB31C55137600E1128F /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = D52CAFB21C55137600E1128F /* back.png */; };
 		D53B384A1C54A65800829D40 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B38491C54A65800829D40 /* GameViewController.m */; };
 		D53B384D1C54A97000829D40 /* RateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53B384C1C54A97000829D40 /* RateViewController.m */; };
 		D53B38531C54C8B900829D40 /* sounds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D53B38521C54C8B900829D40 /* sounds.bundle */; };
@@ -77,6 +80,10 @@
 		D518A76F1C51AEAD009FFC1C /* tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap.png; sourceTree = "<group>"; };
 		D52CAFA61C54EDBB00E1128F /* DataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTool.h; sourceTree = "<group>"; };
 		D52CAFA71C54EDBB00E1128F /* DataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTool.m; sourceTree = "<group>"; };
+		D52CAFAD1C550C9800E1128F /* light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light.png; sourceTree = "<group>"; };
+		D52CAFAF1C550F7C00E1128F /* RankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankViewController.h; sourceTree = "<group>"; };
+		D52CAFB01C550F7C00E1128F /* RankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankViewController.m; sourceTree = "<group>"; };
+		D52CAFB21C55137600E1128F /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		D53B38481C54A65800829D40 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		D53B38491C54A65800829D40 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		D53B384B1C54A97000829D40 /* RateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateViewController.h; sourceTree = "<group>"; };
@@ -141,6 +148,8 @@
 				D53B38491C54A65800829D40 /* GameViewController.m */,
 				D53B384B1C54A97000829D40 /* RateViewController.h */,
 				D53B384C1C54A97000829D40 /* RateViewController.m */,
+				D52CAFAF1C550F7C00E1128F /* RankViewController.h */,
+				D52CAFB01C550F7C00E1128F /* RankViewController.m */,
 				D518A7381C51A71D009FFC1C /* Images.xcassets */,
 				D518A73A1C51A71D009FFC1C /* LaunchScreen.xib */,
 				D518A72B1C51A71D009FFC1C /* Supporting Files */,
@@ -186,6 +195,8 @@
 		D518A7521C51AEAD009FFC1C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D52CAFB21C55137600E1128F /* back.png */,
+				D52CAFAD1C550C9800E1128F /* light.png */,
 				D518A7541C51AEAD009FFC1C /* night.png */,
 				D518A7551C51AEAD009FFC1C /* road.png */,
 				D518A7581C51AEAD009FFC1C /* 06.png */,
@@ -320,6 +331,7 @@
 				D518A7981C51AEAD009FFC1C /* tap.png in Resources */,
 				D518A73C1C51A71D009FFC1C /* LaunchScreen.xib in Resources */,
 				D518A7961C51AEAD009FFC1C /* score.png in Resources */,
+				D52CAFAE1C550C9800E1128F /* light.png in Resources */,
 				D518A7831C51AEAD009FFC1C /* 08.png in Resources */,
 				D518A7921C51AEAD009FFC1C /* rank.png in Resources */,
 				D518A7391C51A71D009FFC1C /* Images.xcassets in Resources */,
@@ -329,6 +341,7 @@
 				D518A78F1C51AEAD009FFC1C /* pipe.png in Resources */,
 				D518A78D1C51AEAD009FFC1C /* main.png in Resources */,
 				D55BAFAE1C53C4340048FFE0 /* bg.png in Resources */,
+				D52CAFB31C55137600E1128F /* back.png in Resources */,
 				D518A7951C51AEAD009FFC1C /* ready2.png in Resources */,
 				D518A77D1C51AEAD009FFC1C /* night.png in Resources */,
 				D518A7811C51AEAD009FFC1C /* 06.png in Resources */,
@@ -351,6 +364,7 @@
 			files = (
 				D53B38571C54CA5F00829D40 /* SoundTool.m in Sources */,
 				D53B384A1C54A65800829D40 /* GameViewController.m in Sources */,
+				D52CAFB11C550F7C00E1128F /* RankViewController.m in Sources */,
 				D518A7341C51A71D009FFC1C /* ViewController.m in Sources */,
 				D53B384D1C54A97000829D40 /* RateViewController.m in Sources */,
 				D52CAFA81C54EDBB00E1128F /* DataTool.m in Sources */,
