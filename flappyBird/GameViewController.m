@@ -12,8 +12,11 @@
 #import "Common.h"
 #import "SoundTool.h"
 #import "DataTool.h"
+#import "GameOverView.h"
 
-@interface GameViewController ()<UIActionSheetDelegate>
+#define kTunnelHeight 80
+
+@interface GameViewController ()<GameOverViewDelegate>
 {
     UIImageView *roadView;
     NSTimer *timer;
@@ -26,7 +29,7 @@
     UIImageView *bottomPipe;
     CGRect topPipeFrame;
     UILabel *columnLabel;
-    UIImageView *gameOverView;
+    GameOverView *gameOver;
 }
 
 @property (nonatomic, strong) SoundTool *soundTool;
@@ -88,10 +91,10 @@
     columnNumber = 0;
     
     //已过柱子计数法及显示
-    columnLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 320, 400)];
+    columnLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, kScreenWidth-40, kScreenHeight-100)];
     columnLabel.text = [NSString stringWithFormat:@"%zi",columnNumber];
     columnLabel.textAlignment = NSTextAlignmentCenter;
-    columnLabel.font = [UIFont boldSystemFontOfSize:400];
+    columnLabel.font = [UIFont boldSystemFontOfSize:150];
     columnLabel.textColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.5];
     [self.view addSubview:columnLabel];
     [self.view insertSubview:columnLabel atIndex:2];
@@ -101,13 +104,13 @@
 
 -(void)pipe {
     //柱子图像
-    NSInteger tall = arc4random() % 200 + 30;
+    NSInteger tall = arc4random() % 200 + 40;
     
     topPipe = [[UIImageView alloc]initWithFrame:CGRectMake(320, -20, 70, tall)];
     topPipe.image = [UIImage imageNamed:@"pipe"];
     [self.view addSubview:topPipe];
 
-    bottomPipe = [[UIImageView alloc]initWithFrame:CGRectMake(320, tall + 80, 70, 400)];
+    bottomPipe = [[UIImageView alloc]initWithFrame:CGRectMake(320, tall + kTunnelHeight, 70, 400)];
     bottomPipe.image = [UIImage imageNamed:@"pipe"];
     [self.view addSubview:bottomPipe];
 
@@ -177,14 +180,6 @@
     }
 }
 
-#pragma mark 弹出GameOver提示
--(void)pullGameOverTip {
-    //game over提示
-    gameOverView = [[UIImageView alloc] initWithFrame:CGRectMake((kScreenWidth-kGameOverViewW)/2, 240, kGameOverViewW, kGameOverViewH)];
-    gameOverView.image = [UIImage imageNamed:@"gameover"];
-    [self.view addSubview:gameOverView];
-}
-
 #pragma mark 更新分数记录
 -(void)updateScore {
     //更新最佳成绩
@@ -194,31 +189,43 @@
     //更新本局分数
     [DataTool setInteger:columnNumber forKey:kCurrentScoreKey];
     //更新排行榜
-    NSMutableArray *ranks = (NSMutableArray *)[DataTool objectForKey:kRankKey];
+    NSArray *ranks = (NSArray *)[DataTool objectForKey:kRankKey];
+    NSMutableArray *newRanksM = [NSMutableArray array];
     NSInteger count = ranks.count;
+    BOOL isUpdate = NO;
     for (NSInteger i = 0; i < count; i++) {
         NSString *scoreStr = ranks[i];
         NSInteger score = [scoreStr integerValue];
-        if (score < columnNumber) {
+        if (score < columnNumber && isUpdate == NO) {
             scoreStr = [NSString stringWithFormat:@"%zi", columnNumber];
-            [ranks insertObject:scoreStr atIndex:i];
-            [ranks removeLastObject];
-            break;
+            [newRanksM addObject:scoreStr];
+            isUpdate = YES;
+        } else {
+            scoreStr = [NSString stringWithFormat:@"%zi", score];
+            [newRanksM addObject:scoreStr];
         }
     }
-    [DataTool setObject:ranks forKey:kRankKey];
+    if (newRanksM.count > count) {
+        [newRanksM removeLastObject];
+    }
+    [DataTool setObject:newRanksM forKey:kRankKey];
+}
+
+#pragma mark 弹出游戏结束操作界面
+-(void)pullGameOver {
+    //游戏结束操作界面
+    gameOver = [[GameOverView alloc] initWithFrame:CGRectMake(20, 160, 280, 300)];
+    gameOver.delegate = self;
+    [self.view addSubview:gameOver];
 }
 
 -(void)onStop {
     //更新分数
     [self updateScore];
-    //弹出gameover提示
-    [self pullGameOverTip];
     //停止定时器
     [timer setFireDate:[NSDate distantFuture]];
-    //弹出选项框
-    UIActionSheet *action = [[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:@"重新开始" destructiveButtonTitle:nil otherButtonTitles:@"主菜单",nil];
-    [action showInView:self.view];
+    //弹出游戏结束操作界面
+    [self pullGameOver];
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -235,6 +242,19 @@
 
 -(void)onTap {
     isTap = NO;
+}
+
+#pragma mark - TipsViewDelegate
+-(void)restartAction {
+    //重新开始
+    ViewController *viewController = [[ViewController alloc]init];
+    [self presentViewController:viewController animated:YES completion:nil];
+}
+
+-(void)mainMenuAction {
+    //主菜单
+    ViewController *viewController = [[ViewController alloc]init];
+    [self presentViewController:viewController animated:YES completion:nil];
 }
 
 #pragma mark 隐藏状态栏

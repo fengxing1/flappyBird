@@ -27,6 +27,9 @@
 		D518A7961C51AEAD009FFC1C /* score.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A76D1C51AEAD009FFC1C /* score.png */; };
 		D518A7971C51AEAD009FFC1C /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A76E1C51AEAD009FFC1C /* start.png */; };
 		D518A7981C51AEAD009FFC1C /* tap.png in Resources */ = {isa = PBXBuildFile; fileRef = D518A76F1C51AEAD009FFC1C /* tap.png */; };
+		D52C7D471C56604D00CF421F /* GameOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C7D461C56604D00CF421F /* GameOverView.m */; };
+		D52C7D4A1C56660A00CF421F /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = D52C7D481C56660A00CF421F /* menu.png */; };
+		D52C7D4B1C56660A00CF421F /* restart.png in Resources */ = {isa = PBXBuildFile; fileRef = D52C7D491C56660A00CF421F /* restart.png */; };
 		D52CAFA81C54EDBB00E1128F /* DataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D52CAFA71C54EDBB00E1128F /* DataTool.m */; };
 		D52CAFAE1C550C9800E1128F /* light.png in Resources */ = {isa = PBXBuildFile; fileRef = D52CAFAD1C550C9800E1128F /* light.png */; };
 		D52CAFB11C550F7C00E1128F /* RankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52CAFB01C550F7C00E1128F /* RankViewController.m */; };
@@ -78,6 +81,10 @@
 		D518A76D1C51AEAD009FFC1C /* score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = score.png; sourceTree = "<group>"; };
 		D518A76E1C51AEAD009FFC1C /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		D518A76F1C51AEAD009FFC1C /* tap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tap.png; sourceTree = "<group>"; };
+		D52C7D451C56604D00CF421F /* GameOverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverView.h; sourceTree = "<group>"; };
+		D52C7D461C56604D00CF421F /* GameOverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverView.m; sourceTree = "<group>"; };
+		D52C7D481C56660A00CF421F /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		D52C7D491C56660A00CF421F /* restart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restart.png; sourceTree = "<group>"; };
 		D52CAFA61C54EDBB00E1128F /* DataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTool.h; sourceTree = "<group>"; };
 		D52CAFA71C54EDBB00E1128F /* DataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTool.m; sourceTree = "<group>"; };
 		D52CAFAD1C550C9800E1128F /* light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light.png; sourceTree = "<group>"; };
@@ -142,6 +149,7 @@
 				D53B38521C54C8B900829D40 /* sounds.bundle */,
 				D53B38541C54CA5F00829D40 /* Tool */,
 				D53B38581C54CA8900829D40 /* Other */,
+				D52C7D441C56601800CF421F /* View */,
 				D518A7321C51A71D009FFC1C /* ViewController.h */,
 				D518A7331C51A71D009FFC1C /* ViewController.m */,
 				D53B38481C54A65800829D40 /* GameViewController.h */,
@@ -195,6 +203,8 @@
 		D518A7521C51AEAD009FFC1C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D52C7D481C56660A00CF421F /* menu.png */,
+				D52C7D491C56660A00CF421F /* restart.png */,
 				D52CAFB21C55137600E1128F /* back.png */,
 				D52CAFAD1C550C9800E1128F /* light.png */,
 				D518A7541C51AEAD009FFC1C /* night.png */,
@@ -218,6 +228,15 @@
 				D518A76F1C51AEAD009FFC1C /* tap.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		D52C7D441C56601800CF421F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D52C7D451C56604D00CF421F /* GameOverView.h */,
+				D52C7D461C56604D00CF421F /* GameOverView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D53B38541C54CA5F00829D40 /* Tool */ = {
@@ -338,10 +357,12 @@
 				D55BAFAB1C53BD830048FFE0 /* bird2.png in Resources */,
 				D55BAFAA1C53BD830048FFE0 /* bird1.png in Resources */,
 				D518A7971C51AEAD009FFC1C /* start.png in Resources */,
+				D52C7D4B1C56660A00CF421F /* restart.png in Resources */,
 				D518A78F1C51AEAD009FFC1C /* pipe.png in Resources */,
 				D518A78D1C51AEAD009FFC1C /* main.png in Resources */,
 				D55BAFAE1C53C4340048FFE0 /* bg.png in Resources */,
 				D52CAFB31C55137600E1128F /* back.png in Resources */,
+				D52C7D4A1C56660A00CF421F /* menu.png in Resources */,
 				D518A7951C51AEAD009FFC1C /* ready2.png in Resources */,
 				D518A77D1C51AEAD009FFC1C /* night.png in Resources */,
 				D518A7811C51AEAD009FFC1C /* 06.png in Resources */,
@@ -366,6 +387,7 @@
 				D53B384A1C54A65800829D40 /* GameViewController.m in Sources */,
 				D52CAFB11C550F7C00E1128F /* RankViewController.m in Sources */,
 				D518A7341C51A71D009FFC1C /* ViewController.m in Sources */,
+				D52C7D471C56604D00CF421F /* GameOverView.m in Sources */,
 				D53B384D1C54A97000829D40 /* RateViewController.m in Sources */,
 				D52CAFA81C54EDBB00E1128F /* DataTool.m in Sources */,
 				D518A72E1C51A71D009FFC1C /* main.m in Sources */,
