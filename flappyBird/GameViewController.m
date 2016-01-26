@@ -104,15 +104,15 @@
     //通道高度
     NSInteger tunnelHeight = 0;
     //根据游戏难度设定通道高度
-    if([[DataTool stringForKey:kRateKey] isEqualToString:@"普通"]) {
+    if([[DataTool stringForKey:kRateKey] isEqualToString:@"ordinary"]) {
         tunnelHeight = 100;
-    }else if([[DataTool stringForKey:kRateKey] isEqualToString:@"一般"]) {
+    }else if([[DataTool stringForKey:kRateKey] isEqualToString:@"general"]) {
         tunnelHeight = 90;
-    }else if([[DataTool stringForKey:kRateKey] isEqualToString:@"困难"]) {
+    }else if([[DataTool stringForKey:kRateKey] isEqualToString:@"difficult"]) {
         tunnelHeight = 80;
-    }else if([[DataTool stringForKey:kRateKey] isEqualToString:@"超难"]) {
+    }else if([[DataTool stringForKey:kRateKey] isEqualToString:@"hard"]) {
         tunnelHeight = 75;
-    } else if([[DataTool stringForKey:kRateKey] isEqualToString:@"抓狂"]) {
+    } else if([[DataTool stringForKey:kRateKey] isEqualToString:@"crazy"]) {
         tunnelHeight = 70;
     }
     
