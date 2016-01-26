@@ -14,8 +14,6 @@
 #import "DataTool.h"
 #import "GameOverView.h"
 
-#define kTunnelHeight 80
-
 @interface GameViewController ()<GameOverViewDelegate>
 {
     UIImageView *roadView;
@@ -103,6 +101,21 @@
 }
 
 -(void)pipe {
+    //通道高度
+    NSInteger tunnelHeight = 0;
+    //根据游戏难度设定通道高度
+    if([[DataTool stringForKey:kRateKey] isEqualToString:@"普通"]) {
+        tunnelHeight = 100;
+    }else if([[DataTool stringForKey:kRateKey] isEqualToString:@"一般"]) {
+        tunnelHeight = 90;
+    }else if([[DataTool stringForKey:kRateKey] isEqualToString:@"困难"]) {
+        tunnelHeight = 80;
+    }else if([[DataTool stringForKey:kRateKey] isEqualToString:@"超难"]) {
+        tunnelHeight = 75;
+    } else if([[DataTool stringForKey:kRateKey] isEqualToString:@"抓狂"]) {
+        tunnelHeight = 70;
+    }
+    
     //柱子图像
     NSInteger tall = arc4random() % 200 + 40;
     
@@ -110,7 +123,7 @@
     topPipe.image = [UIImage imageNamed:@"pipe"];
     [self.view addSubview:topPipe];
 
-    bottomPipe = [[UIImageView alloc]initWithFrame:CGRectMake(320, tall + kTunnelHeight, 70, 400)];
+    bottomPipe = [[UIImageView alloc]initWithFrame:CGRectMake(320, tall + tunnelHeight, 70, 400)];
     bottomPipe.image = [UIImage imageNamed:@"pipe"];
     [self.view addSubview:bottomPipe];
 

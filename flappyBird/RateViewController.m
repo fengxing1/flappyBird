@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _rates = [NSArray arrayWithObjects:@"疯狂", @"超难", @"困难", @"一般", @"普通", nil];
+    _rates = [NSArray arrayWithObjects:@"抓狂", @"超难", @"困难", @"一般", @"普通", nil];
     
     [self setupUI];
     
@@ -36,13 +36,25 @@
     UIImageView *titleView = [[UIImageView alloc]initWithFrame:CGRectMake(titleX, 80, kMainTitleW, kMainTitleH)];
     titleView.image = [UIImage imageNamed:@"main"];
     [self.view addSubview:titleView];
+    
+    //提示语
+    CGFloat tipsW = 120;
+    CGFloat tipsH = 40;
+    CGFloat tipsX = (kScreenWidth - tipsW) / 2;
+    UILabel *tips = [[UILabel alloc] initWithFrame:CGRectMake(tipsX, 150, tipsW, tipsH)];
+    tips.text = @"游戏难度";
+    tips.font = [UIFont boldSystemFontOfSize:30];
+    tips.textAlignment = NSTextAlignmentCenter;
+    tips.textColor = [UIColor orangeColor];
+    [self.view addSubview:tips];
 }
 
 -(void)setupTableView {
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(60, 160, kScreenWidth-120, kScreenHeight - 260) style:UITableViewStyleGrouped];
+    CGFloat x = 80;
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(x, 190, kScreenWidth-2*x, kScreenHeight - 230) style:UITableViewStyleGrouped];
     tableView.delegate = self;
     tableView.dataSource = self;
-    //tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.scrollEnabled = NO; //设置tableview 不能滚动
     [self.view addSubview:tableView];
     tableView.backgroundColor = [UIColor clearColor];
@@ -60,15 +72,16 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     
-    cell.textLabel.textColor = [UIColor orangeColor];
     cell.textLabel.font = [UIFont boldSystemFontOfSize:18];
     cell.textLabel.text = _rates[indexPath.row];
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone; //设置表格选择样式,不显示选中的样式
     if ([cell.textLabel.text isEqualToString:[DataTool stringForKey:kRateKey]]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        cell.textLabel.textColor = [UIColor redColor];
     }else{
         cell.accessoryType = UITableViewCellAccessoryNone;
+        cell.textLabel.textColor = [UIColor orangeColor];
     }
     
     return cell;
