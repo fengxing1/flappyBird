@@ -73,11 +73,12 @@
     }
     
     cell.textLabel.textColor = [UIColor orangeColor];
-    cell.textLabel.font = [UIFont boldSystemFontOfSize:18];
+    cell.textLabel.font = [UIFont fontWithName:@"Marker Felt" size:20];
     cell.textLabel.text = _titles[indexPath.row];
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone; //设置表格选择样式,不显示选中的样式
     cell.detailTextLabel.text = _ranks[indexPath.row];
+    cell.detailTextLabel.font = [UIFont fontWithName:@"Marker Felt" size:20];
     
     return cell;
 }

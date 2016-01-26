@@ -92,8 +92,8 @@
     columnLabel = [[UILabel alloc]initWithFrame:CGRectMake(20, 0, kScreenWidth-40, kScreenHeight-100)];
     columnLabel.text = [NSString stringWithFormat:@"%zi",columnNumber];
     columnLabel.textAlignment = NSTextAlignmentCenter;
-    columnLabel.font = [UIFont boldSystemFontOfSize:150];
-    columnLabel.textColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.5];
+    columnLabel.font = [UIFont fontWithName:@"Marker Felt" size:150];
+    columnLabel.textColor = [UIColor colorWithRed:0.6 green:0.5 blue:0.5 alpha:0.5];
     [self.view addSubview:columnLabel];
     [self.view insertSubview:columnLabel atIndex:2];
     

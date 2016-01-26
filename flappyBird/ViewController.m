@@ -24,7 +24,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     //初始化数据
     if ([DataTool stringForKey:kRateKey] == nil) {
-        [DataTool setObject:@"一般" forKey:kRateKey];
+        [DataTool setObject:@"general" forKey:kRateKey];
     }
     if ([DataTool objectForKey:kRankKey] == nil) {
         NSArray *ranks = [NSArray arrayWithObjects:@"0", @"0", @"0", @"0", @"0", nil];
@@ -58,7 +58,7 @@
     CGFloat bestH = 20;
     UILabel *bestScore = [[UILabel alloc] initWithFrame:CGRectMake(bestX, bestY, bestW, bestH)];
     bestScore.text = [NSString stringWithFormat:@"%zi", [DataTool integerForKey:kBestScoreKey]];
-    bestScore.font = [UIFont systemFontOfSize:16];
+    bestScore.font = [UIFont fontWithName:@"Marker Felt" size:16];
     bestScore.textAlignment = NSTextAlignmentRight;
     bestScore.textColor = [UIColor orangeColor];
     [self.view addSubview:bestScore];
@@ -70,7 +70,7 @@
     UILabel *score = [[UILabel alloc] initWithFrame:CGRectMake(scoreX, scoreY, scoreW, scoreH)];
     score.text = [NSString stringWithFormat:@"%zi", [DataTool integerForKey:kCurrentScoreKey]];
     
-    score.font = [UIFont systemFontOfSize:16];
+    score.font = [UIFont fontWithName:@"Marker Felt" size:16];
     score.textAlignment = NSTextAlignmentRight;
     score.textColor = [UIColor orangeColor];
     [self.view addSubview:score];

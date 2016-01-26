@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _rates = [NSArray arrayWithObjects:@"抓狂", @"超难", @"困难", @"一般", @"普通", nil];
+    _rates = [NSArray arrayWithObjects:@"crazy", @"hard", @"difficult", @"general", @"ordinary", nil];
     
     [self setupUI];
     
@@ -38,12 +38,12 @@
     [self.view addSubview:titleView];
     
     //提示语
-    CGFloat tipsW = 120;
+    CGFloat tipsW = 280;
     CGFloat tipsH = 40;
     CGFloat tipsX = (kScreenWidth - tipsW) / 2;
     UILabel *tips = [[UILabel alloc] initWithFrame:CGRectMake(tipsX, 150, tipsW, tipsH)];
-    tips.text = @"游戏难度";
-    tips.font = [UIFont boldSystemFontOfSize:30];
+    tips.text = @"The game difficulty";
+    tips.font = [UIFont fontWithName:@"Marker Felt" size:30];
     tips.textAlignment = NSTextAlignmentCenter;
     tips.textColor = [UIColor orangeColor];
     [self.view addSubview:tips];
@@ -72,8 +72,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     
-    cell.textLabel.font = [UIFont boldSystemFontOfSize:18];
     cell.textLabel.text = _rates[indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName:@"Marker Felt" size:18];
     cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone; //设置表格选择样式,不显示选中的样式
     if ([cell.textLabel.text isEqualToString:[DataTool stringForKey:kRateKey]]) {
