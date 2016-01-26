@@ -5,6 +5,7 @@ flappyBird Game</br>
  * 游戏音效
  * 重新开始
  * 排行榜
+ * 游戏等级设定
 
 # Screenshots
 <img alt="one" src="https://raw.github.com/charsdavy/flappyBird/master/screenshots/fp1.png" width="180">
