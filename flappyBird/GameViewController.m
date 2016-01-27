@@ -100,6 +100,7 @@
     self.soundTool = [[SoundTool alloc] init];
 }
 
+#pragma mark 绘制柱子
 -(void)pipe {
     //通道高度
     NSInteger tunnelHeight = 0;
@@ -185,6 +186,7 @@
     }
 }
 
+#pragma mark 更新分数
 -(void)columnLabelClick {
     
     if (topPipeFrame.origin.x == (100 + 30 - 70)) {
@@ -213,6 +215,7 @@
             scoreStr = [NSString stringWithFormat:@"%zi", columnNumber];
             [newRanksM addObject:scoreStr];
             isUpdate = YES;
+            i--;
         } else {
             scoreStr = [NSString stringWithFormat:@"%zi", score];
             [newRanksM addObject:scoreStr];
@@ -232,6 +235,7 @@
     [self.view addSubview:gameOver];
 }
 
+#pragma mark 游戏停止
 -(void)onStop {
     //更新分数
     [self updateScore];
@@ -241,18 +245,7 @@
     [self pullGameOver];
 }
 
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 1) {
-        //重新开始
-        ViewController *viewController = [[ViewController alloc]init];
-        [self presentViewController:viewController animated:YES completion:nil];
-    } else {
-        //主菜单
-        ViewController *viewController = [[ViewController alloc]init];
-        [self presentViewController:viewController animated:YES completion:nil];
-    }
-}
-
+#pragma mark tap手势操作
 -(void)onTap {
     isTap = NO;
 }
@@ -270,7 +263,7 @@
     [self presentViewController:viewController animated:YES completion:nil];
 }
 
-#pragma mark 隐藏状态栏
+#pragma mark - 隐藏状态栏
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
